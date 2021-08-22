@@ -1,9 +1,14 @@
 # Cinema
-A sample App with VIPER
+A sample App with VIPER desing pattern
 
 <img src="https://user-images.githubusercontent.com/46831352/130367324-45871d7d-bd9e-47e8-833c-ec995dc9bf72.png" width=35% height=10%>
 
+
 <img src="https://user-images.githubusercontent.com/46831352/130367329-a805625a-bed2-48d7-8a6b-727605df3582.png" width=35% height=10%>
+
+
+<img src="https://user-images.githubusercontent.com/46831352/130367955-2c05b312-5ecf-40df-ac63-a2da5c1f6d34.png" width=35% height=10%>
+
 
 
 ## Swift
