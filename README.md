@@ -9,7 +9,10 @@ A sample App with VIPER design pattern
 
 <img src="https://user-images.githubusercontent.com/46831352/130367955-2c05b312-5ecf-40df-ac63-a2da5c1f6d34.png" width=35% height=10%>
 
-
+##
+### TMDB
+API Key: https://www.themoviedb.org/documentation/api?language=pt-BR
+## 
 
 ## Swift
 
