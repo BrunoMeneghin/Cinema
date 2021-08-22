@@ -1,9 +1,9 @@
 # Cinema
 A sample App with VIPER
 
-![Simulator Screen Shot - iPhone 12 - 2021-08-22 at 13 02 43](https://user-images.githubusercontent.com/46831352/130367324-45871d7d-bd9e-47e8-833c-ec995dc9bf72.png)
+<img src="https://user-images.githubusercontent.com/46831352/130367324-45871d7d-bd9e-47e8-833c-ec995dc9bf72.png" width=35% height=10%>
 
-![Simulator Screen Shot - iPhone 12 - 2021-08-22 at 13 03 10](https://user-images.githubusercontent.com/46831352/130367329-a805625a-bed2-48d7-8a6b-727605df3582.png)
+<img src="https://user-images.githubusercontent.com/46831352/130367329-a805625a-bed2-48d7-8a6b-727605df3582.png" width=35% height=10%>
 
 
 ## Swift
