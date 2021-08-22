@@ -1,5 +1,5 @@
 # Cinema
-A sample App with VIPER desing pattern
+A sample App with VIPER design pattern
 
 <img src="https://user-images.githubusercontent.com/46831352/130367324-45871d7d-bd9e-47e8-833c-ec995dc9bf72.png" width=35% height=10%>
 
