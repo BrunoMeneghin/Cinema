@@ -11,7 +11,7 @@ final class RequestData: RequestDataProtocol {
     func serviceRequest<E>(with url: API,
                         completion: @escaping (Result<E?, HTTPClient>) -> Void) where E : Decodable {
         guard let _url = URL(string: url.domain) else { return }
-        URLSession.shared.dataTask(with:_url) { data, response, error in
+        URLSession.shared.dataTask(with: _url) { data, response, error in
             guard error == nil,
                   let data = data,
                   let response = response
