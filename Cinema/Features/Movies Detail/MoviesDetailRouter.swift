@@ -9,12 +9,7 @@ import UIKit
 
 typealias EntryPointMoviesDetail = MoviesDetailViewProtocol & UIViewController
 
-protocol MoviesDetailRouterProtocol {
-    var entry: EntryPointMoviesDetail? { get }
-    static func start() -> MoviesDetailRouterProtocol
-}
-
-class MoviesDetailRouter: MoviesDetailRouterProtocol {
+final class MoviesDetailRouter: MoviesDetailRouterProtocol {
     var entry: EntryPointMoviesDetail?
 
     static func start() -> MoviesDetailRouterProtocol {

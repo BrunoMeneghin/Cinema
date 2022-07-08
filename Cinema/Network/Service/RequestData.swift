@@ -8,9 +8,10 @@
 import Foundation
 
 final class RequestData: RequestDataProtocol {
-    func serviceRequest<E>(with url: URL,
+    func serviceRequest<E>(with url: API,
                         completion: @escaping (Result<E?, HTTPClient>) -> Void) where E : Decodable {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        guard let _url = URL(string: url.domain) else { return }
+        URLSession.shared.dataTask(with:_url) { data, response, error in
             guard error == nil,
                   let data = data,
                   let response = response

@@ -7,15 +7,7 @@
 
 import UIKit
 
-protocol MoviesDetailPresenterProtocol {
-    var moviesDetailView: MoviesDetailViewProtocol? { get set }
-    var moviesDetailRouter: MoviesDetailRouterProtocol? { get set }
-    var moviesDetailInteractor: MoviesDetailInteractorProtocol? { get set }
-
-    func fetchDetailMoviesInteractor()
-}
-
-class MoviesDetailPresenter: MoviesDetailPresenterProtocol {
+final class MoviesDetailPresenter: MoviesDetailPresenterProtocol {
     var moviesDetailView: MoviesDetailViewProtocol?
     var moviesDetailRouter: MoviesDetailRouterProtocol?
     var moviesDetailInteractor: MoviesDetailInteractorProtocol? {

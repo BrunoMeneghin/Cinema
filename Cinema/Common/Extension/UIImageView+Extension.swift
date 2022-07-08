@@ -13,7 +13,7 @@ extension UIImageView {
         tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         image = UIImage(systemName: "text.below.photo.fill")
 
-        let path = API.URL.basePoster + url
+        let path = API.basePoster + url
         guard let urlPath = URL(string: path) else { return }
 
         CacheableImage.shared.cacheableImageFromURL(from: urlPath) { [weak self] (image) in

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol RequestDataProtocol {
-    func serviceRequest<E: Decodable>(with url: URL,
+    func serviceRequest<E: Decodable>(with url: API,
                                    completion: @escaping (Result<E?, HTTPClient>) -> Void)
 }

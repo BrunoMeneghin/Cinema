@@ -9,14 +9,7 @@ import UIKit
 
 fileprivate let reusableIdentifier: String = "moviesCellID"
 
-protocol MoviesViewProtocol {
-    var moviesPresenter: MoviesPresenterProtocol? { get set }
-    
-    func updateMoviesWithErrorHandling(_ error: HTTPClient)
-    func updateMovies(with movies: [Movie])
-}
-
-class MoviesViewTableViewController: UITableViewController, MoviesViewProtocol, MoviesAttributesDetailProtocol {
+class MoviesViewTableViewController: UITableViewController, MoviesViewProtocol {
     // MARK: Properties
 
     lazy var originalTitleMovie = String()
@@ -64,7 +57,6 @@ class MoviesViewTableViewController: UITableViewController, MoviesViewProtocol, 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as? DecorateMoviesTableViewCellLayout
         else { return UITableViewCell() }
         let movie = movies[indexPath.row]
-        cell.selectionStyle = .none
         cell.moviePosterImage.downloadableImage(with: movie.poster)
         cell.titleMovieLabel.text = movie.originalTitle
 
@@ -72,16 +64,8 @@ class MoviesViewTableViewController: UITableViewController, MoviesViewProtocol, 
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = movies[indexPath.row]
-        let moviesDetailRouter = MoviesDetailRouter.start()
-
-        if var presentableMoviesDetailViewController = moviesDetailRouter.entry {
-            presentableMoviesDetailViewController.movieAttributeDetailDelegate = self
-            posterMovie = movie.poster
-            originalTitleMovie = movie.originalTitle
-
-            present(presentableMoviesDetailViewController, animated: true)
-        }
+        moviesPresenter?.destinationRouteForMovieDetails(movieRoom: self.navigationController ?? UINavigationController(),
+                                                         movieTitle: movies, movieTicket: indexPath.row)
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 75.0 }

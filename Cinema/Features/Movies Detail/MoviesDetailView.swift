@@ -7,19 +7,6 @@
 
 import UIKit
 
-protocol MoviesDetailViewProtocol {
-    var decorateMoviesDetail: DecorateMoviesDetailLayout { get set }
-    var moviesDetailPresenter: MoviesDetailPresenterProtocol? { get set }
-    var movieAttributeDetailDelegate: MoviesAttributesDetailProtocol? { get set }
-
-    func updateMoviesDetail()
-}
-
-protocol MoviesAttributesDetailProtocol: AnyObject {
-    var posterMovie: String { get set }
-    var originalTitleMovie: String { get set }
-}
-
 class MoviesDetailViewController: UIViewController, MoviesDetailViewProtocol {
     // MARK: Properties
 
